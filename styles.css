@@ -1,8 +1,21 @@
-/*
+.has-inline-copy {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
 
-This CSS file will be included with your plugin, and
-available in the app when your plugin is enabled.
+.inline-copy-btn {
+  display: inline-flex;
+  cursor: pointer;
+  opacity: 0.6;
+  vertical-align: middle;
+}
 
-If your plugin does not need CSS, delete this file.
+.inline-copy-btn:hover {
+  opacity: 1;
+}
 
-*/
+.inline-copy-btn svg {
+  width: 12px;
+  height: 12px;
+}
