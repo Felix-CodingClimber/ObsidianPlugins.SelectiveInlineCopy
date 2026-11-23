@@ -1,5 +1,7 @@
 # Selective Inline Copy
 
+![Inline code with copy buttons in Obsidian](./screenshot.png)
+
 Add a copy button to selected inline code in Obsidian.
 
 ## Usage
