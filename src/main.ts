@@ -21,8 +21,9 @@ export default class SelectiveInlineCopyPlugin extends Plugin {
 
           copyBtn.addEventListener('click', (e) => {
             e.stopPropagation();
-            navigator.clipboard.writeText(cleanCode);
-            new Notice('Copied to clipboard!');
+            void navigator.clipboard.writeText(cleanCode)
+              .then(() => new Notice('Copied to clipboard!'))
+              .catch(() => new Notice('Could not copy to clipboard.'));
           });
         }
       });
