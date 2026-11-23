@@ -22,7 +22,9 @@ To build from source instead, run `npm install` and `npm run build`, then copy t
 
 ## Releases
 
-In a clean working tree, run `npm version patch` (or `minor` or `major`) to update the version files and create a commit and tag. Push the commit and the matching tag, such as `1.0.1` (without a `v` prefix). The release workflow builds and publishes `main.js`, `manifest.json`, and `styles.css`. Alternatively, run **Release Obsidian plugin** from **Actions** with an existing tag that has no release.
+In a clean working tree, run `npm version patch` (or `minor` or `major`) to update the version files and create a commit and tag. Push the commit and the matching tag (without a `v` prefix). The release workflow builds and publishes `main.js`, `manifest.json`, and `styles.css`. Alternatively, run **Release Obsidian plugin** from **Actions** with an existing tag that has no release.
+
+The workflow builds the tagged commit, not the branch selected when dispatching it. Before pushing a tag, check that `git show <tag>:manifest.json` contains the same version as the tag. If an existing tag points to a commit with a different manifest version, do not rerun it expecting a later branch commit to be used. Instead, create and push a new version commit and its matching tag. In particular, the existing `1.0.1` tag points to a `1.0.0` manifest; after merging the version synchronization, use the next patch version (`1.0.2`) for the next release.
 
 ## License
 

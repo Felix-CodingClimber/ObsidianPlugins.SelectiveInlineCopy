@@ -1,6 +1,6 @@
 {
 	"name": "selective-inline-copy",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Adds a copy button to selected inline code in Obsidian.",
 	"main": "main.js",
 	"type": "module",
